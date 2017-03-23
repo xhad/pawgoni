@@ -1,9 +1,10 @@
 ![alt text](https://raw.githubusercontent.com/xhad/pawgoni/master/assets/pawgoni.png "Pawgoni")
-# Pawgoni 
+# Pawgoni
 ## Process Actuarial Worker for Logon Intents
 
 Artificial intelligence is critical for cybersecurity and web development. This project will consider defending against botnets, specifically XOR. Combating this threat must automate the monitoring of infected addresses and take measures to notify the compromised machine’s internet access provider with solutions for resolution. To do so, a processes actuarial monitoring system for sshd authentication Intent (PAWGONI) that employs machine learning to track and automate threat response will be developed.
 
+Read the [whitepaper](https://docs.google.com/document/d/135o3CWTkWr71n2ZJ_7tr9LkVNrn_Jhusfm7WVlAoq2g/edit?usp=sharing) for more information regarding conceptuality and design.
 ## Up and running
 
 Get the repo:
@@ -29,7 +30,7 @@ npm install
 ## Database
 
 Next, build the mondodb docker image. Here is a link for more infromation
-on how to [build docker images](https://docs.docker.com/engine/getstarted/step_four/);
+on how to [build docker images](https://docs.docker.com/engine/getstarted/step_four/):
 
 ```
 sudo apt install Docker docker-compose
@@ -43,7 +44,7 @@ To run the database as a daemon:
 docker-compose up -d
 ```
 
-To copy a csv file from the host to the container and import the longon.csv file to the mongodb running on the contianer
+To copy a csv file from the host to the container and import the longon.csv file to the MongoDB running on the container:
 
 ```
 docker cp ./seed-data  db_mongodb_1:/root/seed-data
