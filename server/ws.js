@@ -4,7 +4,6 @@ const http = require('http');
 const id = require('uuid');
 const Rx = require('rxjs');
 
-// const server = http.createServer();
 const Server = require('socket.io');
 
 let logonData = new GetLogonData();
@@ -18,13 +17,12 @@ let clientMaker$ = new Rx.Subject();
 
 io.on('connection', (client) => {
   console.log(client.handshake)
-   // basic security middleware check doge packets
 
   // Check for CORS
   if (client.handshake.headers.origin != DOMAIN) {
     console.log('Client Failed CORS test, disconnected');
     // write connection to logs
-    db.save('wsLogs', {status: 403, handshake: client.handshake})
+    logonData.save('wsLogs', {status: 403, handshake: client.handshake})
     // disconnect this limp handshake
     client.disconnect();
   }
@@ -36,17 +34,17 @@ io.on('connection', (client) => {
     clientMaker$.next(client);
 
   } else { client.disconnect() }
- 
+
 })
 
 let removeClient = function(client) {
   io.disconnect(client.socket);
   procStack[client.id] = null;
-  
+
 }
 
 let handleClient = function(client) {
-
+  // basic security middleware check doge packets
   client.use((packet, next) => {
     if (packet.doge === true) return next();
     next(new Error('Not a doge error'));

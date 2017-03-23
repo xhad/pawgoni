@@ -4,7 +4,7 @@ Below you have instructions on how the project has been set up.
 
 ## Up and running
 
-Get the repo: 
+Get the repo:
 
 ```
 git clone http://github.com/xhad/pawgoni.git
@@ -24,9 +24,9 @@ pip install -r requirements.txt
 npm install
 ```
 
-## Database 
+## Database
 
-Next, build the mondodb docker image. Here is a link for more infromation 
+Next, build the mondodb docker image. Here is a link for more infromation
 on how to [build docker images](https://docs.docker.com/engine/getstarted/step_four/);
 
 ```
@@ -36,21 +36,9 @@ cd db
 ./build-db.sh
 ```
 
-To run the database as a daemon: 
+To run the database as a daemon:
 ```
 docker-compose up -d
-```
-
-Connect to the docker container running mongodb (your container name may be different)
-```
-docker exec -it db_mongodb_1 bash
-```
-
-** Just a note -> to Clean up and erase all docker containers:
-
-```
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
 ```
 
 To copy a csv file from the host to the container and import the longon.csv file to the mongodb running on the contianer
@@ -61,20 +49,32 @@ docker exec -it db_mongodb_1 bash
 mongoimport  --db pawgoni --collection logons  --type csv --headerline --file /root/seed-data/logons.csv
 ```
 
-## Websocket Data Server 
+NOTES
+```
+docker exec -it db_mongodb_1 bash
+```
+
+Clean up and erase all docker containers:
+
+```
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
+## Websocket Data Server
 
 Socket.io server with nodejs that handles delievery of large data sets
-This server requires PM2, a node process manaager, to be installed globally. 
+This server requires PM2, a node process manaager, to be installed globally.
 ```
 sudo npm install -g pm2
 ```
 
 
-Now that you have everything installed, you can build and run the app with one
-npm `run-script` command:
+Now that you have everything installed, you can build and run the app.
 
 ```
-npm run app
+npm start
+npm stop
 ```
 
 This will compile the JavaScript modules and Less and start up the Flask API.
@@ -103,7 +103,7 @@ The style and design libraries are from Materialize. Reference [React Materializ
 
 ## Scrape GeoLocation Data for Logon Source IP
 
-After you have imported logons.csv into Mongo and started the mongodb container, 
+After you have imported logons.csv into Mongo and started the mongodb container,
 you can run this command and get all geo location data form ip addresses
 
 ```
