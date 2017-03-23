@@ -1,0 +1,17 @@
+mongodb:
+  image: mongo-pawgoni
+  command: mongod --noprealloc --smallfiles --dbpath /data/db --nojournal --oplogSize 16 --noauth
+  ports:
+    - "27019:27017"
+  # volumes:
+  #   - /etc/localtime:/etc/localtime:ro
+  #   - ./data/mongors1n1:/data/db
+
+
+# # my webserver which uses mongo (not shown in example)
+# webserver:
+#   build: .
+#   ports:
+#     - "80:80"
+#   links:
+#     - mongodb
