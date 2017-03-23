@@ -1,4 +1,4 @@
-// Adds Geo Location Recrod to Logon data in Mongo
+// Adds Geo Location Record to Logon data in Mongo
 const ObjectId = require('mongodb').ObjectId;
 const mongojs = require('mongojs');
 const request = require('request');
@@ -51,17 +51,17 @@ let logonData$ = Rx.Observable.create((observer) => {
 
   // takes record from Source throttle Observable and adds GeoLocation
   dbStream$.subscribe(record => {
-    if (record.doc && !record.doc.GeoLoc && record.doc.Source) 
+    if (record.doc && !record.doc.GeoLoc && record.doc.Source)
         addGeoLoc(record.doc).then(result => {
             let percentFinished = ((record.i + 1) / stack.length * 100).toFixed(2) + ' %';
             console.log('adding GeoLoc to', result._id, '#', record.i +1 , 'of', stack.length, percentFinished);
-            db.logons.update({_id: ObjectId(result._id)}, result, 
+            db.logons.update({_id: ObjectId(result._id)}, result,
                 console.log);
             observer.next(result)
         });
   });
 
-    // from stack array of records throttle api calls with a delay 
+    // from stack array of records throttle api calls with a delay
     let source$ = Rx.Observable.interval(1000)
     .flatMap((e) => {
         if (stack[e]) {
