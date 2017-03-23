@@ -1,5 +1,5 @@
 ![alt text](https://raw.githubusercontent.com/xhad/pawgoni/master/assets/pawgoni.png "Pawgoni")
-# Pawgoni
+# Pawgoni [![Gitter chat](https://badges.gitter.im/gitterHQ/services.png)](https://gitter.im/Pawgoni)
 ## Process Actuarial Worker for Authentication Incidence
 
 Artificial intelligence is critical for cybersecurity and web development. This project will consider defending against botnets, specifically XOR. Combating this threat must automate the monitoring of infected addresses and take measures to notify the compromised machine’s internet access provider with solutions for resolution. To do so, a processes actuarial monitoring system for sshd authentication Intent (PAWGONI) that employs machine learning to track and automate threat response will be developed.
@@ -33,7 +33,7 @@ Next, build the mondodb docker image. Here is a link for more infromation
 on how to [build docker images](https://docs.docker.com/engine/getstarted/step_four/):
 
 ```
-sudo apt install Docker docker-compose
+sudo apt install docker docker-compose
 sudo gpasswd -a ${USER} docker
 cd db
 ./build-db.sh
