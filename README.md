@@ -46,7 +46,7 @@ Connect to the docker container running mongodb (your container name may be diff
 docker exec -it db_mongodb_1 bash
 ```
 
-Erase all docker containers:
+** Just a note -> to Clean up and erase all docker containers:
 
 ```
 docker stop $(docker ps -a -q)
