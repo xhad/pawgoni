@@ -66,7 +66,7 @@ docker rm $(docker ps -a -q)
 
 ## Client Database
 
-To more effective manage data streams, this project uses [RxDB](https://github.com/pubkey/rxdb) on the client.
+To more effectively manage data, this project uses [RxDB](https://github.com/pubkey/rxdb) on the client.
 
 
 
