@@ -18,7 +18,6 @@ that you have [Python3](https://www.python.org/downloads/) and
 
 ```
 sudo apt-get install python3-venv
-sudo apt install supervisor
 pyvenv env
 source env/bin/activate
 pip install -r requirements.txt
