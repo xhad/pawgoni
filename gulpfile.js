@@ -9,6 +9,14 @@ var spawn = require('child_process').spawn;
 var config = require('./config/conf.js');
 var webpackConfig = require('./webpack.config');
 
+
+let paths = {
+  style: ['./src/less/main.less',
+          './src/js/components/*.css',
+          './src/js/components/**/*.css']
+};
+
+
 function onBuild (name, done) {
   return function (err, stats) {
     if (err) {
@@ -26,7 +34,7 @@ function onBuild (name, done) {
       done();
     }
   };
-}
+};
 
 gulp.task('js:compile', function (done) {
   webpack(webpackConfig, onBuild('js', done));
@@ -47,7 +55,7 @@ gulp.task('js:prod', function (done) {
 });
 
 gulp.task('js:watch', function () {
-  webpack(webpackConfig).watch(100, onBuild('js'));
+  webpack(webpackConfig).watch(100, onBuild('js'))
 });
 
 gulp.task('css:compile', function () {
@@ -62,7 +70,7 @@ gulp.task('css:compile', function () {
 
 gulp.task('css:watch', function () {
   return gulp.src('./src/less/main.less')
-    .pipe(watch('./src/less/**/*'))
+    .pipe(watch('./src/less/main.less'))
     .pipe(less({
       paths: ['.', './node_modules'],
       plugins: [autoprefix]

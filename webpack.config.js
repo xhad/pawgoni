@@ -14,20 +14,16 @@ config.entry = [
 config.module = {
   loaders: [
     {
-      loader:  'babel-loader',     
+      loader:  'babel-loader',
       test:    /\.jsx?$/,
       query: {
         presets: ['react', 'es2015', 'stage-0']
       },
       exclude: /node_modules/
     },
-    { 
-      test: /\.css$/, 
+    {
+      test: /\.css$/,
       loader: 'css-loader'
-    },
-        { 
-      test: /\.scss$/, 
-      loader: 'sass-loader'
     },
     {
       test: /\.svg$/,
@@ -40,9 +36,7 @@ config.module = {
         }
       }
     }
-    
-  ],
-  postLoaders: []
+  ]
 };
 
 config.output = {
@@ -53,8 +47,6 @@ config.output = {
   devtoolModuleFilenameTemplate: '[resourcePath]',
   devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
 };
-
-config.rules = [];
 
 config.plugins = [
     new webpack.HotModuleReplacementPlugin(),
@@ -67,7 +59,6 @@ config.resolve = {
     '.js',
     '.jsx',
     '.css',
-    '.scss',
     '.svg'
   ],
   modulesDirectories: [

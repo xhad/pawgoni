@@ -95,6 +95,10 @@ To watch the src folder for changes and automatically recompile, run:
 npm run watch
 ```
 
+### React
+
+Routing: [React-Router](https://reacttraining.com/react-router/web/guides/quick-start)
+
 NOTE: Limitation with FLASK prevent effective live browser reloading.
 
 ## Running tests
