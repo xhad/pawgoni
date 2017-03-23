@@ -53,7 +53,7 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
 
-To copy a csv file fr0m the host to the container and import the longon.csv file to the mongodb running on the contianer
+To copy a csv file from the host to the container and import the longon.csv file to the mongodb running on the contianer
 
 ```
 docker cp ./seed-data  db_mongodb_1:/root/seed-data
@@ -97,16 +97,13 @@ flag into the npm `run-script` command.
 npm run test -- -w
 ```
 
-This enables that TDD sweetness, allowing you to focus on feeding the
-red-to-green beast.
-
 ## Styling and Design
 
 The style and design libraries are from Materialize. Reference [React Materialize](https://react-materialize.github.io/) for designing with this project.
 
 ## Scrape GeoLocation Data for Logon Source IP
 
-After you have imported Logon CSV file into Mongo and started the mongo db container, 
+After you have imported logons.csv into Mongo and started the mongodb container, 
 you can run this command and get all geo location data form ip addresses
 
 ```
