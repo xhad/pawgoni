@@ -1,4 +1,4 @@
-# pawgoni - Process Actuarial Worker for Longon Intents
+# pawgoni - Process Actuarial Worker for Logon Intents
 
 Below you have instructions on how the project has been set up.
 
