@@ -27,7 +27,7 @@ pip install -r requirements.txt
 npm install
 ```
 
-## Database
+## Server Database
 
 Next, build the mondodb docker image. Here is a link for more infromation
 on how to [build docker images](https://docs.docker.com/engine/getstarted/step_four/):
@@ -63,6 +63,12 @@ Clean up and erase all docker containers:
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
+
+## Client Database
+
+To more effective manage data streams, this project uses [RxDB](https://github.com/pubkey/rxdb) on the client.
+
+
 
 ## Websocket Data Server
 
