@@ -1,6 +1,6 @@
 # pawgoni - Process Actuarial Worker for Logon Intents
 
-Below you have instructions on how the project has been set up.
+Artificial intelligence is critical for cybersecurity and web development. This project will consider defending against botnets, specifically XOR. Combating this threat must automate the monitoring of infected addresses and take measures to notify the compromised machine’s internet access provider with solutions for resolution. To do so, a processes actuarial monitoring system for sshd authentication Intent (PAWGONI) that employs machine learning to track and automate threat response will be developed.
 
 ## Up and running
 
@@ -78,6 +78,15 @@ npm stop
 ```
 
 This will compile the JavaScript modules and Less and start up the Flask API.
+
+## Development
+
+To watch the src folder for changes and automatically recompile, run:
+```
+npm run watch
+```
+
+NOTE: Limitation with FLASK prevent effective live browser reloading.
 
 ## Running tests
 

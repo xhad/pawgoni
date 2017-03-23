@@ -10,7 +10,7 @@ let GetLogonData = function () {
   this.stack = [];
   this.count = 0;
 
-  let cursor = this.db.logons.find({}, {}, {timeout: false}).limit(10000)
+  let cursor = this.db.logons.find({}, {}, {timeout: false});
   cursor.on('data', data => {
       ++this.count;
       this.stack.push(data);

@@ -1,5 +1,5 @@
 const DOMAIN = require('../config/conf').DOMAIN;
-const GetLogonData = require('./GetLogonData');
+const GetLogonData = require('./getLogonData');
 const http = require('http');
 const id = require('uuid');
 const Rx = require('rxjs');
