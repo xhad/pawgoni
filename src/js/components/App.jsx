@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
   render() {
 
-    const activeStyle = { 'color': '#C3712F', 'borderBottom': '3px solid #C3712F' };
+    let activeStyle = { 'color': '#C3712F', 'borderBottom': '3px solid #C3712F' };
 
     return (
       <Router basename={'/'}>

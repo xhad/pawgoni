@@ -79,6 +79,11 @@ gulp.task('css:watch', function () {
     .pipe(gulp.dest('./static/css'))
 });
 
-gulp.task('compile', ['js:compile', 'css:compile']);
-gulp.task('prod', ['js:prod', 'css:compile']);
+gulp.task('assets:compile', function() {
+  return gulp.src('./assets')
+      .pipe(gulp.dest('./static'))
+})
+
+gulp.task('compile', ['js:compile', 'css:compile', 'assets:compile']);
+gulp.task('prod', ['js:prod', 'css:compile', 'assets:compile']);
 gulp.task('watch', ['js:watch', 'css:watch']);

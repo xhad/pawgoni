@@ -29,7 +29,7 @@ npm install
 
 ## Server Database
 
-Next, build the mondodb docker image. Here is a link for more infromation
+Next, build the MongoDB docker image. Here is a link for more information
 on how to [build docker images](https://docs.docker.com/engine/getstarted/step_four/):
 
 ```
@@ -72,8 +72,8 @@ To more effectively manage data, this project uses [RxDB](https://github.com/pub
 
 ## Websocket Data Server
 
-Socket.io server with nodejs that handles delievery of large data sets
-This server requires PM2, a node process manaager, to be installed globally.
+Socket.io server with nodejs that handles delivery of large data sets
+This server requires PM2, a node process manager, to be installed globally.
 ```
 sudo npm install -g pm2
 ```
@@ -97,9 +97,11 @@ npm run watch
 
 ### React
 
+React: [React](https://facebook.github.io/react/docs/introducing-jsx.html)
 Routing: [React-Router](https://reacttraining.com/react-router/web/guides/quick-start)
+Observables: [Rxjs](http://reactivex.io/rxjs)
+Database: [RxDB](https://github.com/pubkey/rxdb)
 
-NOTE: Limitation with FLASK prevent effective live browser reloading.
 
 ## Running tests
 
@@ -125,7 +127,7 @@ The style and design libraries are from Materialize. Reference [React Materializ
 
 ## Scrape GeoLocation Data for Logon Source IP
 
-After you have imported logons.csv into Mongo and started the mongodb container,
+After you have imported logons.csv into MongoDB and started the container,
 you can run this command and get all geo location data form ip addresses
 
 ```
