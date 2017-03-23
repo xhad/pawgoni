@@ -1,4 +1,6 @@
-# pawgoni - Process Actuarial Worker for Logon Intents
+# Pawgonoi ![alt text](https://raw.githubusercontent.com/xhad/pawgoni/master/assets/pawgoni.png "Pawgoni")
+
+## Process Actuarial Worker for Logon Intents
 
 Artificial intelligence is critical for cybersecurity and web development. This project will consider defending against botnets, specifically XOR. Combating this threat must automate the monitoring of infected addresses and take measures to notify the compromised machine’s internet access provider with solutions for resolution. To do so, a processes actuarial monitoring system for sshd authentication Intent (PAWGONI) that employs machine learning to track and automate threat response will be developed.
 
