@@ -1,4 +1,4 @@
-# Pawgonoi ![alt text](https://raw.githubusercontent.com/xhad/pawgoni/master/assets/pawgoni.png "Pawgoni")
+# Pawgoni ![alt text](https://raw.githubusercontent.com/xhad/pawgoni/master/assets/pawgoni.png "Pawgoni")
 
 ## Process Actuarial Worker for Logon Intents
 
