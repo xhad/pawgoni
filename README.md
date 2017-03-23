@@ -4,7 +4,7 @@
 
 Artificial intelligence is critical for cybersecurity and web development. This project will consider defending against botnets, specifically XOR. Combating this threat must automate the monitoring of infected addresses and take measures to notify the compromised machine’s internet access provider with solutions for resolution. To do so, a processes actuarial monitoring system for sshd authentication Intent (PAWGONI) that employs machine learning to track and automate threat response will be developed.
 
-Read the [whitepaper](https://docs.google.com/document/d/135o3CWTkWr71n2ZJ_7tr9LkVNrn_Jhusfm7WVlAoq2g/edit?usp=sharing) for more information regarding conceptuality and design.
+Read the [whitepaper](https://docs.google.com/document/d/135o3CWTkWr71n2ZJ_7tr9LkVNrn_Jhusfm7WVlAoq2g/edit?usp=sharing) for the conceptual basis of this project.
 ## Up and running
 
 Get the repo:
