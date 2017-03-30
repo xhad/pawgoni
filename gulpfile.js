@@ -80,8 +80,8 @@ gulp.task('css:watch', function () {
 });
 
 gulp.task('assets:compile', function() {
-  return gulp.src('./assets')
-      .pipe(gulp.dest('./static'))
+  return gulp.src('./assets/*')
+      .pipe(gulp.dest('./static/assets'))
 })
 
 gulp.task('compile', ['js:compile', 'css:compile', 'assets:compile']);

@@ -13,5 +13,16 @@ parser = reqparse.RequestParser()
 def index(path):
     return render_template('index.html')
 
+@app.route("/getPlotCSV")
+def getPlotCSV():
+    # with open("outputs/Adjacency.csv") as fp:
+    #     csv = fp.read()
+    csv = '1,2,3\n4,5,6\n'
+    return Response(
+        csv,
+        mimetype="text/csv",
+        headers={"Content-disposition":
+                 "attachment; filename=db/seed-data/logons.csv"})
+
 if __name__ == '__main__':
     app.run(debug=True)
