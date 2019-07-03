@@ -12,7 +12,9 @@
     "prod": "gulp prod",
     "test": "mocha --compilers js:babel-register --recursive test/*",
     "watch": "gulp watch",
-    "ws": "gulp ws"
+    "ws": "gulp ws",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "LYNCH <chad@sentigence.com>",
   "repository": {
@@ -69,6 +71,8 @@
     "style-loader": "^0.14.1",
     "svg-react-loader": "^0.3.7",
     "uuid": "^3.0.1",
-    "webpack": "^1.9.0"
-  }
+    "webpack": "^1.9.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
